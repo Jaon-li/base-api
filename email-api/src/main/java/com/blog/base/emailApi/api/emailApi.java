@@ -1,7 +1,7 @@
 package com.blog.base.emailApi.api;
 
 import com.blog.base.userApi.config.Config;
-import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 

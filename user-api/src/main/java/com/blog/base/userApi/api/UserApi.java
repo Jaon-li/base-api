@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(value = Config.SERVER_NAME)
 @Controller("/api/user/")
-public interface userApi {
+public interface UserApi {
 
     @PostMapping("/register")
     BaseResponse<UserInfo> register(@RequestBody RegisterEntity registerEntity);

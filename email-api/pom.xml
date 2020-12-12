@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
 
 
-    <name>user-api</name>
+    <name>email-api</name>
     <description>Demo project for Spring Boot</description>
 
 
