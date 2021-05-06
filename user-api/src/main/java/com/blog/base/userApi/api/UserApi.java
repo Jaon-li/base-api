@@ -1,20 +1,20 @@
 package com.blog.base.userApi.api;
 
+import com.blog.base.response.BaseResponse;
 import com.blog.base.userApi.config.Config;
 import com.blog.base.userApi.request.LoginEntity;
 import com.blog.base.userApi.request.RegisterEntity;
 import com.blog.base.userApi.request.RestPwdEntity;
 import com.blog.base.userApi.request.UserInfoEntity;
-import com.blog.base.userApi.response.BaseResponse;
 import com.blog.base.userApi.response.UserInfo;
 import feign.Param;
-import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.stereotype.Controller;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @FeignClient(value = Config.SERVER_NAME)
-@Controller("/api/user/")
+@RestController("/api/user/")
 public interface UserApi {
 
     @PostMapping("/register")
