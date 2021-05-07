@@ -7,22 +7,17 @@ import com.blog.base.response.BaseResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
-@FeignClient(value = Config.SERVER_NAME)
-@RestController("/api/email/")
+@FeignClient(value = Config.SERVER_NAME, path = "/api/email")
 public interface EmailApi {
 
     @PostMapping("/send")
-    @SentinelResource("send")
     BaseResponse<Boolean> send(@RequestBody EmailContentEntity emailContentEntity);
 
     @PostMapping("/cancel")
-    @SentinelResource("cancel")
     BaseResponse<Boolean> cancel(Integer id);
 
     @PostMapping("/query")
-    @SentinelResource("query")
     BaseResponse<Boolean> query(Integer id);
 
 
