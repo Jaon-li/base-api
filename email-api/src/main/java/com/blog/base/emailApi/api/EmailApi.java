@@ -21,4 +21,5 @@ public interface EmailApi {
     BaseResponse<Boolean> query(Integer id);
 
 
+
 }
